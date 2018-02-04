@@ -24,7 +24,7 @@ function stackdriverAppender(logFileName, resource, layout, credentials) {
         if (resource) {
             metadata.resource = resource;
         }
-        metadata.resource.labels.namespace_id = metadata.resource.labels.namespace_id || loggingEvent.categoryName;
+        metadata.resource.labels.namespace_id = resource && resource.labels && resource.labels.namespace_id || loggingEvent.categoryName;
         var entry = log.entry(metadata, layout(loggingEvent));
 
         log.write(entry);
