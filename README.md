@@ -1,4 +1,4 @@
-# log4js-node-stackdriver
+# log4js-stackdriver-appender
 a log4js appender for use with the stackdriver on google cloud.
 
 to allow access to google cloud logging please follow setup and access permission on google cloud  documentation.
