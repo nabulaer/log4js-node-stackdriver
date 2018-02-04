@@ -1,8 +1,12 @@
 # log4js-node-stackdriver
-an appender for the stackdriver on google cloud.
+a log4js appender for use with the stackdriver on google cloud.
 
 to allow access to google cloud logging please follow setup and access permission on google cloud  documentation.
 You can use Application Default Credentials (ADC) or supply credential in config.
+
+if your code is running on Google Cloud then make sure the proper scopes is setup.
+
+if you running on you local dev server , use gcloud cli to authorize.
 
 By default all logging will be done to file syslog in the "Global" logging section.
 
