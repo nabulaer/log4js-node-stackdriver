@@ -1,5 +1,5 @@
 {
-  "name": "log4js-node-stackdriver",
+  "name": "log4js-stackdriver-appender",
   "version": "1.0.0",
   "description": "a log4js appender to use with google cloude logging stackdriver api",
   "main": "index.js",
@@ -19,9 +19,12 @@
     "logging"
   ],
   "author": "Yosi Oren",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/nabulaer/log4js-node-stackdriver/issues"
   },
-  "homepage": "https://github.com/nabulaer/log4js-node-stackdriver#readme"
+  "homepage": "https://github.com/nabulaer/log4js-node-stackdriver#readme",
+  "dependencies": {
+    "@google-cloud/logging": "^1.1.2"
+  }
 }
