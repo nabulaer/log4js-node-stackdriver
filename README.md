@@ -46,3 +46,18 @@ log4js.configure(config);
 var logger = log4js.getLogger('local');
 logger.debug('somthing');
 ```
+
+if you are running from local/not on GCP you can supply credentials in the config for connecting to your GCP
+```js
+var config ={
+    appenders:{
+        google:{
+            type: 'log4js-stackdriver-appender',
+            credentials:{
+                projectId: 'your-project-id',
+                keyFilename: '/path/to/key.json'
+            }
+        }
+    }
+}
+```
