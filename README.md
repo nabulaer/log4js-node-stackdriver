@@ -1,7 +1,7 @@
 # log4js-stackdriver-appender
 a log4js appender for use with the stackdriver on google cloud.
 
-to allow access to google cloud logging please follow setup and access permission on google cloud  documentation.
+to allow access to google cloud logging please follow [setup](https://cloud.google.com/logging/docs/setup/nodejs) and access permission on google cloud  documentation.
 You can use Application Default Credentials (ADC) or supply credential in config.
 
 if your code is running on Google Cloud then make sure the proper scopes is setup.
@@ -13,7 +13,7 @@ By default all logging will be done to file syslog in the "Global" logging secti
 If you want you can specify a resource which the log will be written to.
 
 
-quick usage :
+## quick usage 
 ```js
 var config ={
     appenders: {
@@ -60,4 +60,9 @@ var config ={
         }
     }
 }
+```
+
+## install
+```bash
+npm install log4js-stackdriver-appender --save
 ```
