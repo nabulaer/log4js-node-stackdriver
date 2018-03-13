@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/nabulaer/log4js-node-stackdriver#readme",
   "dependencies": {
-    "@google-cloud/logging": "1.1.1"
+    "@google-cloud/logging": "^1.1.7"
   }
 }
