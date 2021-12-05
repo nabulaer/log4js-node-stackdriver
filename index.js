@@ -2,7 +2,7 @@
  *  Created by yosi on 04/02/2018
  */
 
-var Logging = require('@google-cloud/logging');
+var {Logging} = require('@google-cloud/logging');
 
 
 function stackdriverAppender(logFileName, resource, layout, credentials) {
@@ -24,6 +24,8 @@ function stackdriverAppender(logFileName, resource, layout, credentials) {
         if (resource) {
             metadata.resource = resource;
         }
+        if(loggingEvent.context)
+        metadata.labels  = loggingEvent.context;
         metadata.resource.labels.namespace_id = resource && resource.labels && resource.labels.namespace_id || loggingEvent.categoryName;
         var entry = log.entry(metadata, layout(loggingEvent));
 
